@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽 Recipe Dashboard</h1>
+  <button onclick="toggleForm()">➕ Add Recipe</button>
+</header>
+
+<div class="container">
+
+  <!-- SEARCH -->
+  <input id="search" placeholder="Search recipe..." onkeyup="searchRecipe()">
+
+  <!-- FORM -->
+  <div id="recipeForm">
+
+    <input id="title" placeholder="Recipe Name">
+
+    <textarea id="ingredients" placeholder="Ingredients"></textarea>
+
+    <textarea id="steps" placeholder="Cooking Steps"></textarea>
+
+    <!-- IMAGE SECTION -->
+    <div class="image-section">
+      <p>Add Image (URL OR Paste)</p>
+
+      <input id="imageUrl" placeholder="Paste image URL (optional)">
+
+      <div class="or">OR</div>
+
+      <div id="pasteBox">Paste Image Here (Ctrl + V)</div>
+    </div>
+
+    <!-- IMPORTANT: id added -->
+    <button id="saveBtn" onclick="saveRecipe()">💾 Save Recipe</button>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="recipeList"></div>
+
+</div>
+
+<!-- ⚠️ SCRIPT ONLY ONCE -->
+<script src="script.js"></script>
+</body>
+</html>
